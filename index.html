@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07131c">
+<meta name="description" content="Nalla Naga Kanaka Durgarao — cybersecurity graduate building practical skills in SOC operations, SIEM monitoring, incident investigation and cloud security.">
+<title>Nalla Naga Kanaka Durgarao — Security, with intent.</title>
+<style>
+:root{--ink:#e9f1ed;--muted:#a2b3ac;--bg:#07131c;--panel:#0d2029;--panel2:#102832;--line:rgba(184,218,204,.16);--acid:#c8f169;--cyan:#71d9cf;--orange:#f1a66b;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 88% 10%,rgba(113,217,207,.10),transparent 32%),radial-gradient(ellipse at 0% 48%,rgba(200,241,105,.055),transparent 35%)}
+a{color:inherit;text-decoration:none}.shell{width:min(var(--max),calc(100% - 48px));margin:auto}
+.topline{height:4px;background:linear-gradient(90deg,var(--acid),var(--cyan),transparent 72%)}
+header{position:sticky;top:0;z-index:20;background:rgba(7,19,28,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:12px;align-items:center;font-size:12px;font-weight:800;letter-spacing:.1em}.brandmark{width:38px;height:38px;border:1px solid var(--acid);display:grid;place-items:center;color:var(--acid);font-size:12px;transform:rotate(-6deg)}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:.22em;font-weight:500;margin-top:2px}
+nav{display:flex;align-items:center;gap:25px}nav a{font-size:11px;letter-spacing:.12em;color:#b5c5be}nav a:hover,nav a:focus{color:var(--acid)}.nav-cta{border:1px solid var(--acid);padding:9px 13px;color:var(--acid);border-radius:2px}
+.menu{display:none;background:none;color:var(--ink);border:1px solid var(--line);padding:8px 11px}
+.hero{padding:92px 0 88px;display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:center;min-height:660px}
+.overline,.eyebrow{font-size:10px;letter-spacing:.23em;text-transform:uppercase;color:var(--acid);font-weight:700}.overline:before{content:"";display:inline-block;width:25px;height:1px;background:var(--acid);vertical-align:middle;margin-right:12px}
+h1{font-size:clamp(48px,7vw,88px);line-height:.98;letter-spacing:-.07em;margin:24px 0 25px;font-weight:650;max-width:700px}h1 em{font-style:normal;color:var(--acid)}.hero-copy{max-width:600px;color:#b7c8c1;font-size:16px;line-height:1.9}.hero-copy strong{color:var(--ink);font-weight:600}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;gap:12px;padding:13px 17px;border:1px solid var(--line);font-size:10px;letter-spacing:.14em;font-weight:800;text-transform:uppercase;transition:.22s}.btn:hover{transform:translateY(-3px);border-color:var(--acid)}.btn.primary{background:var(--acid);border-color:var(--acid);color:#102018}.btn .arrow{font-size:16px;line-height:0}
+.hero-meta{display:flex;gap:24px;flex-wrap:wrap;margin-top:42px;padding-top:19px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.hero-meta span:before{content:"↗";color:var(--cyan);margin-right:8px}
+.hero-art{min-height:440px;position:relative;display:grid;place-items:center}.art-frame{width:min(100%,470px);aspect-ratio:1/1;position:relative;border:1px solid rgba(200,241,105,.25);background:linear-gradient(145deg,rgba(18,47,54,.65),rgba(7,19,28,.15));overflow:hidden}
+.art-frame:before{content:"";position:absolute;inset:18px;border:1px solid rgba(113,217,207,.16)}.art-frame:after{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(transparent,rgba(113,217,207,.25),transparent)}
+.grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(113,217,207,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(113,217,207,.06) 1px,transparent 1px);background-size:36px 36px;mask-image:linear-gradient(135deg,black,transparent 85%)}
+.ring{position:absolute;border:1px solid rgba(200,241,105,.42);border-radius:50%;width:68%;aspect-ratio:1;left:16%;top:16%;animation:rotate 28s linear infinite}.ring:before,.ring:after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--acid);box-shadow:0 0 20px var(--acid)}.ring:before{left:15%;top:17%}.ring:after{right:6%;bottom:25%;background:var(--cyan);box-shadow:0 0 20px var(--cyan)}
+.ring.two{width:48%;left:26%;top:26%;border-style:dashed;border-color:rgba(113,217,207,.45);animation-direction:reverse;animation-duration:19s}.ring.three{width:88%;left:6%;top:6%;border-color:rgba(113,217,207,.13);animation-duration:44s}
+.center-mark{position:absolute;inset:0;display:grid;place-items:center}.monogram{width:148px;height:148px;border:1px solid var(--acid);display:grid;place-items:center;background:rgba(7,19,28,.8);box-shadow:0 0 80px rgba(200,241,105,.08);font-size:54px;letter-spacing:-.1em;color:var(--acid);font-weight:700}
+.art-label{position:absolute;left:30px;bottom:27px;font-size:9px;letter-spacing:.18em;color:var(--muted)}.art-index{position:absolute;right:30px;top:28px;font-size:10px;color:var(--cyan);letter-spacing:.15em}.signal{position:absolute;padding:10px 12px;background:#0b1d26;border:1px solid var(--line);font-size:10px;color:#c5d5ce;letter-spacing:.1em}.signal b{color:var(--acid);display:block;font-size:9px;margin-bottom:2px}.s1{top:8%;left:-5%}.s2{right:-5%;top:39%}.s3{bottom:8%;left:8%}
+.section{padding:90px 0;border-top:1px solid var(--line)}.section-head{display:grid;grid-template-columns:.7fr 1.3fr;gap:30px;align-items:end;margin-bottom:42px}.section-no{color:var(--acid);font-size:10px;letter-spacing:.2em}.section h2{font-size:clamp(34px,5vw,54px);letter-spacing:-.06em;line-height:1.05;margin:10px 0 0}.section-intro{color:var(--muted);max-width:580px;font-size:14px}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}.about-main{padding:34px;background:var(--panel);border:1px solid var(--line)}.about-main p{color:#b6c7c0;margin:0 0 17px}.about-main p:last-child{margin-bottom:0}.aside-stack{display:grid;gap:12px}.note{border:1px solid var(--line);padding:22px;background:rgba(13,32,41,.72)}.note small{color:var(--cyan);letter-spacing:.16em;font-size:9px}.note strong{display:block;font-size:17px;margin:6px 0 2px}.note span{font-size:11px;color:var(--muted)}
+.skill-layout{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill-card{padding:24px;border:1px solid var(--line);background:linear-gradient(150deg,rgba(16,40,50,.86),rgba(9,25,34,.82));min-height:190px}.skill-card .symbol{font-size:20px;color:var(--acid)}.skill-card h3{font-size:14px;margin:12px 0 14px}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{font-size:10px;color:#c4d3cd;border:1px solid rgba(184,218,204,.16);padding:5px 8px}
+.project-list{display:grid;gap:14px}.project{display:grid;grid-template-columns:90px 1fr auto;gap:24px;align-items:start;padding:27px 28px;border:1px solid var(--line);background:rgba(13,32,41,.72);transition:.22s}.project:hover{border-color:rgba(200,241,105,.55);transform:translateX(4px)}.project-no{color:var(--acid);font-size:11px;letter-spacing:.15em;padding-top:5px}.project-type{font-size:9px;letter-spacing:.18em;color:var(--cyan);text-transform:uppercase}.project h3{font-size:20px;letter-spacing:-.03em;margin:5px 0 8px}.project p{font-size:13px;color:var(--muted);max-width:760px;margin:0}.stackline{margin-top:14px;color:#c8d6d0;font-size:10px;letter-spacing:.04em}.project-mark{font-size:24px;color:var(--cyan)}
+.experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.experience{padding:21px 23px;border-left:2px solid var(--acid);background:rgba(13,32,41,.72)}.experience time{font-size:9px;letter-spacing:.17em;color:var(--cyan)}.experience h3{font-size:14px;margin:7px 0 0}.experience p{font-size:11px;color:var(--muted);margin:3px 0 0}
+.credential-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px}.credential{padding:27px;border:1px solid var(--line);background:var(--panel)}.credential h3{font-size:14px;margin:0 0 17px}.credential ul{list-style:none;padding:0;margin:0;display:grid;gap:11px}.credential li{font-size:12px;color:#b8c8c1;display:flex;gap:10px}.credential li:before{content:"↳";color:var(--acid)}
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.edu{padding:23px;border:1px solid var(--line);background:rgba(13,32,41,.7)}.edu time{font-size:10px;color:var(--acid);letter-spacing:.15em}.edu h3{font-size:14px;line-height:1.45;margin:12px 0 7px}.edu p{font-size:11px;color:var(--muted);margin:3px 0}
+.contact-wrap{display:grid;grid-template-columns:1fr .9fr;gap:35px;align-items:center}.contact-statement{font-size:clamp(32px,5vw,58px);letter-spacing:-.06em;line-height:1.05;margin:0}.contact-statement em{font-style:normal;color:var(--acid)}.contact-copy{color:var(--muted);max-width:500px}.contact-list{display:grid;gap:9px}.contact-list a{display:flex;justify-content:space-between;align-items:center;padding:15px 17px;border:1px solid var(--line);font-size:12px;color:#c9d7d1;transition:.2s}.contact-list a:hover{border-color:var(--acid);color:var(--acid)}.contact-list small{color:var(--muted);font-size:9px;letter-spacing:.12em}
+footer{padding:25px 0;border-top:1px solid var(--line);color:#81958d;font-size:10px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}
+@keyframes rotate{to{transform:rotate(360deg)}}
+@media(max-width:900px){nav{gap:13px}nav a{font-size:9px}.hero{gap:28px}.skill-layout{grid-template-columns:1fr 1fr}.section-head{grid-template-columns:1fr}.project{grid-template-columns:60px 1fr auto}}
+@media(max-width:680px){.shell{width:calc(100% - 32px)}.nav{height:68px}.menu{display:block}nav{display:none;position:absolute;top:68px;left:0;right:0;padding:20px 24px;background:#091923;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}nav.open{display:flex}nav a{font-size:11px}.hero{padding:62px 0 55px;grid-template-columns:1fr;gap:24px}.hero h1{font-size:clamp(48px,14vw,70px)}.hero-art{min-height:340px}.art-frame{width:min(100%,390px)}.signal{font-size:8px}.s1{left:0}.s2{right:0}.section{padding:65px 0}.about,.contact-wrap,.credential-layout{grid-template-columns:1fr}.skill-layout,.experience-grid{grid-template-columns:1fr}.project{grid-template-columns:38px 1fr;gap:13px;padding:22px 17px}.project-mark{display:none}.edu-grid{grid-template-columns:1fr}.section h2{font-size:40px}.about-main{padding:24px}.foot{display:block}.foot span{display:block;margin:5px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ring{animation:none}.reveal{opacity:1;transform:none;transition:none}.btn,.project{transition:none}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header><div class="shell nav">
+<a class="brand" href="#top"><span class="brandmark">ND</span><span>NALLA NAGA KANAKA DURGARAO<small>CYBERSECURITY · PERSONAL PORTFOLIO</small></span></a>
+<button class="menu" id="menu" aria-label="Open navigation" aria-expanded="false">MENU</button>
+<nav id="navigation" aria-label="Main navigation">
+<a href="#story">STORY</a><a href="#capabilities">CAPABILITIES</a><a href="#work">WORK</a><a href="#journey">JOURNEY</a><a href="#education">EDUCATION</a><a class="nav-cta" href="#contact">CONTACT ↗</a>
+</nav></div></header>
+<main id="top">
+<section class="shell hero">
+<div class="reveal">
+<div class="overline">CYBERSECURITY GRADUATE · INDIA</div>
+<h1>Security is<br>built through<br><em>curiosity.</em></h1>
+<p class="hero-copy">I’m <strong>Nalla Naga Kanaka Durgarao</strong> — a cybersecurity graduate drawn to the work behind reliable security: understanding systems, reading their signals, investigating what looks unusual, and learning how to make them stronger.</p>
+<div class="hero-actions"><a class="btn primary" href="#work">EXPLORE MY WORK <span class="arrow">↗</span></a><a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">VIEW RESUME <span class="arrow">↓</span></a></div>
+<div class="hero-meta"><span>SOC & SIEM interests</span><span>Practical security labs</span><span>Cloud security learning</span></div>
+</div>
+<div class="hero-art reveal" aria-label="Abstract custom cybersecurity monogram illustration">
+<div class="art-frame"><div class="grid-lines"></div><div class="ring three"></div><div class="ring"></div><div class="ring two"></div><div class="center-mark"><div class="monogram">ND</div></div><div class="art-index">FIELD NOTES / 001</div><div class="art-label">OBSERVE · INVESTIGATE · IMPROVE</div></div>
+<div class="signal s1"><b>01 / OBSERVE</b>Events & telemetry</div><div class="signal s2"><b>02 / ANALYZE</b>Patterns & evidence</div><div class="signal s3"><b>03 / RESPOND</b>Methodical action</div>
+</div>
+</section>
+
+<section class="section" id="story"><div class="shell reveal">
+<div class="section-head"><div><div class="section-no">01 — THE PERSON</div><h2>A practical<br>learning mindset.</h2></div><p class="section-intro">I’m building my career around hands-on security work. I prefer understanding how a tool fits into a workflow, what its output means, and how to document what I learn.</p></div>
+<div class="about">
+<div class="about-main">
+<p>I completed a B.Tech in Computer Science and Engineering with a specialization in Cybersecurity. My learning has covered networking, security monitoring, vulnerability assessment, endpoint telemetry and cloud fundamentals.</p>
+<p>My current direction is entry-level security operations and cloud security. I use practical labs to strengthen my foundations in log analysis, packet inspection, event investigation and security tooling.</p>
+<p>I value clear documentation, careful troubleshooting and honest representation of technical skills. I’m continuing to grow through projects, structured learning and repeatable lab exercises.</p>
+</div>
+<div class="aside-stack">
+<div class="note"><small>ACADEMIC FOUNDATION</small><strong>7.56 / 10</strong><span>B.Tech CGPA · Cybersecurity</span></div>
+<div class="note"><small>PRIMARY INTEREST</small><strong>SOC & SIEM</strong><span>Monitoring, event analysis and incident investigation</span></div>
+<div class="note"><small>GROWING FOCUS</small><strong>Cloud security</strong><span>AWS fundamentals, identity and access concepts</span></div>
+</div>
+</div></div></section>
+
+<section class="section" id="capabilities"><div class="shell reveal">
+<div class="section-head"><div><div class="section-no">02 — THE TOOLKIT</div><h2>Skills, in context.</h2></div><p class="section-intro">A practical snapshot of tools and concepts covered in my coursework, internships and learning labs. Basic-level topics are labelled honestly.</p></div>
+<div class="skill-layout">
+<article class="skill-card"><div class="symbol">⌁</div><h3>Security operations</h3><div class="chips"><span class="chip">SIEM monitoring</span><span class="chip">Incident response</span><span class="chip">Log analysis</span><span class="chip">Threat detection</span><span class="chip">Vulnerability assessment</span><span class="chip">Threat hunting · Basic</span></div></article>
+<article class="skill-card"><div class="symbol">⌘</div><h3>Security tools</h3><div class="chips"><span class="chip">Splunk Enterprise</span><span class="chip">Sysmon</span><span class="chip">Wireshark</span><span class="chip">Nmap</span><span class="chip">Burp Suite</span><span class="chip">Metasploit</span><span class="chip">Snort</span></div></article>
+<article class="skill-card"><div class="symbol">⇄</div><h3>Networking</h3><div class="chips"><span class="chip">TCP/IP</span><span class="chip">DNS</span><span class="chip">HTTP/HTTPS</span><span class="chip">OSI model</span><span class="chip">Firewalls</span><span class="chip">VPN</span><span class="chip">Packet analysis</span></div></article>
+<article class="skill-card"><div class="symbol">◈</div><h3>Cloud & identity</h3><div class="chips"><span class="chip">AWS cloud fundamentals</span><span class="chip">IAM concepts</span><span class="chip">Authentication</span><span class="chip">Authorization</span><span class="chip">MFA</span><span class="chip">SSO</span><span class="chip">RBAC</span><span class="chip">Active Directory · Basic</span></div></article>
+<article class="skill-card"><div class="symbol">▣</div><h3>Systems & lab platforms</h3><div class="chips"><span class="chip">Windows</span><span class="chip">Kali Linux</span><span class="chip">Ubuntu</span><span class="chip">VMware Workstation</span><span class="chip">VirtualBox</span><span class="chip">TryHackMe</span></div></article>
+<article class="skill-card"><div class="symbol">⌨</div><h3>Programming & web</h3><div class="chips"><span class="chip">Python · Basic</span><span class="chip">Java · Basic</span><span class="chip">HTML</span><span class="chip">CSS</span></div></article>
+</div></div></section>
+
+<section class="section" id="work"><div class="shell reveal">
+<div class="section-head"><div><div class="section-no">03 — SELECTED WORK</div><h2>Learning by<br>building.</h2></div><p class="section-intro">These projects reflect practical lab work and academic exploration. Repository links can be added when the corresponding public project URLs are confirmed.</p></div>
+<div class="project-list">
+<article class="project"><div class="project-no">01 / LAB</div><div><div class="project-type">SIEM · SECURITY MONITORING</div><h3>Splunk SIEM Monitoring Lab</h3><p>Built a security monitoring lab using Splunk, Sysmon and a Universal Forwarder to collect and inspect Windows events, practice SPL searches and explore alerting workflows.</p><div class="stackline">SPLUNK ENTERPRISE &nbsp;·&nbsp; SYSMON &nbsp;·&nbsp; WINDOWS &nbsp;·&nbsp; SPL</div></div><div class="project-mark">↗</div></article>
+<article class="project"><div class="project-no">02 / LAB</div><div><div class="project-type">INCIDENT INVESTIGATION</div><h3>SOC Incident Investigation Lab</h3><p>Practiced investigating a simulated brute-force scenario by reviewing endpoint events and network traffic, correlating evidence and following an incident-analysis workflow.</p><div class="stackline">SPLUNK &nbsp;·&nbsp; SYSMON &nbsp;·&nbsp; WIRESHARK &nbsp;·&nbsp; EVENT LOGS</div></div><div class="project-mark">↗</div></article>
+<article class="project"><div class="project-no">03 / LAB</div><div><div class="project-type">VULNERABILITY ASSESSMENT</div><h3>Vulnerability Assessment & Penetration Testing Lab</h3><p>Explored vulnerability assessment and web/network security testing concepts in a controlled learning environment using common security tools.</p><div class="stackline">NMAP &nbsp;·&nbsp; BURP SUITE &nbsp;·&nbsp; METASPLOIT &nbsp;·&nbsp; KALI LINUX</div></div><div class="project-mark">↗</div></article>
+<article class="project"><div class="project-no">04 / RESEARCH</div><div><div class="project-type">ACADEMIC PROJECT · MARITIME CYBERSECURITY</div><h3>Anomaly Detection in AIS Data</h3><p>Academic project focused on identifying anomalies in Automatic Identification System data in the context of maritime cybersecurity.</p><div class="stackline">DATA ANALYSIS &nbsp;·&nbsp; ANOMALY DETECTION &nbsp;·&nbsp; MARITIME CYBERSECURITY</div></div><div class="project-mark">↗</div></article>
+</div></div></section>
+
+<section class="section" id="journey"><div class="shell reveal">
+<div class="section-head"><div><div class="section-no">04 — THE JOURNEY</div><h2>Learning & exposure.</h2></div><p class="section-intro">Virtual internship programs and learning experiences listed in my resume.</p></div>
+<div class="experience-grid">
+<article class="experience"><time>OCT — DEC 2025</time><h3>Fortinet — Network Security Associate Virtual Internship</h3></article>
+<article class="experience"><time>JUL — SEP 2025</time><h3>Juniper Networks — Networking Cloud Virtual Internship</h3></article>
+<article class="experience"><time>APR — JUN 2025</time><h3>Ethical Hacking Virtual Internship</h3></article>
+<article class="experience"><time>OCT — DEC 2024</time><h3>Palo Alto Networks — Cybersecurity Virtual Internship</h3></article>
+<article class="experience"><time>APR — JUN 2024</time><h3>Zscaler — Zero Trust Cloud Security Virtual Internship</h3></article>
+<article class="experience"><time>JAN — MAR 2024</time><h3>AWS Academy — Cloud Virtual Internship</h3></article>
+</div>
+<div class="credential-layout" style="margin-top:18px">
+<article class="credential"><h3>Certifications</h3><ul><li>Cisco — Introduction to Cybersecurity</li><li>Ethical Hacking Fundamentals</li><li>Zero Trust Cloud Security</li></ul></article>
+<article class="credential"><h3>Practice & achievements</h3><ul><li>CTF challenges</li><li>Web exploitation and network security labs</li><li>Hands-on cybersecurity learning environments</li></ul></article>
+</div>
+</div></section>
+
+<section class="section" id="education"><div class="shell reveal">
+<div class="section-head"><div><div class="section-no">05 — EDUCATION</div><h2>The foundation.</h2></div><p class="section-intro">Academic background in computer science, cybersecurity and electronics communication.</p></div>
+<div class="edu-grid">
+<article class="edu"><time>2023 — 2026</time><h3>B.Tech — Computer Science & Engineering (Cybersecurity)</h3><p>Swarnandhra College of Engineering and Technology</p><p>CGPA: 7.56 / 10</p></article>
+<article class="edu"><time>2020 — 2023</time><h3>Diploma — Electronic Communication and Engineering</h3><p>D.S. Raju Polytechnic</p><p>Percentage: 83%</p></article>
+<article class="edu"><time>2020</time><h3>SSC</h3><p>Z.P.P.H. School</p><p>Marks: 535</p></article>
+</div>
+</div></section>
+
+<section class="section" id="contact"><div class="shell reveal">
+<div class="section-head"><div><div class="section-no">06 — CONTACT</div><h2>Start a conversation.</h2></div><p class="section-intro">Open to entry-level opportunities in SOC operations, security analysis, cloud support and related cybersecurity roles.</p></div>
+<div class="contact-wrap">
+<div><p class="contact-statement">Good security starts with <em>good questions.</em></p><p class="contact-copy">If you have an opportunity, a technical discussion or a project to explore, I’d be glad to connect.</p><a class="btn primary" href="mailto:ndurgarao033@gmail.com">SEND AN EMAIL <span class="arrow">↗</span></a></div>
+<div class="contact-list">
+<a href="mailto:ndurgarao033@gmail.com"><span>ndurgarao033@gmail.com</span><small>EMAIL ↗</small></a>
+<a href="tel:+917702842743"><span>+91 77028 42743</span><small>PHONE ↗</small></a>
+<a href="https://www.linkedin.com/in/naga-kanaka-durgarao-nalla-8413bb2bb" target="_blank" rel="noopener"><span>LinkedIn profile</span><small>CONNECT ↗</small></a>
+<a href="https://github.com/Durgarao1322" target="_blank" rel="noopener"><span>GitHub — Durgarao1322</span><small>VIEW CODE ↗</small></a>
+<a href="assets/resume.pdf" target="_blank" rel="noopener"><span>Resume · PDF</span><small>OPEN ↗</small></a>
+</div>
+</div></div></section>
+</main>
+<footer><div class="shell foot"><span>© <span id="year"></span> Nalla Naga Kanaka Durgarao</span><span>Designed around a real learning journey. No invented experience or metrics.</span></div></footer>
+<script>
+const menu=document.getElementById('menu'),nav=document.getElementById('navigation');
+menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'CLOSE':'MENU';});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='MENU';}));
+document.getElementById('year').textContent=new Date().getFullYear();
+if('IntersectionObserver' in window){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));}
+</script>
+</body></html>
